@@ -2,7 +2,7 @@
 # File : gzip_asmaudit.log.1.sh
 # Desc : Find and gzip /var/log/asmaudit.log.1 if it's > 1.5 GB
 
-threshold=1610612736
+threshold=1073741824
 FileSizeCheck=$(stat -c %s "/var/log/asmaudit.log.1")
 
 if [ $FileSizeCheck -gt $threshold ]
